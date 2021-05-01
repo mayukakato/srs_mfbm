@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>東京ミッドタウン日比谷ステップ広場</title>
+    <style type="text/css">
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+      }
+
+      header {
+        height: 60px;
+        width: 100%;
+        background-color: rgba(74, 10, 51, 1.0);
+        position :fixed;
+        top: 0;
+        z-index: 10;
+      }
+
+      .container-header {
+        max-width: 1170px;
+        width: 100%;
+        padding: 0 15px;
+        margin: 0 auto;
+        height: 100%;
+      }
+
+      .header-left p {
+        text-decoration: none;
+        color: white;
+        line-height: 60px;
+        display: inline;
+        vertical-align: middle;
+      }
+
+      .header-right {
+        float: right;
+        margin-right: -25px;
+      }
+
+      .wnilogo {
+        width: 124px;
+        margin-top: 20px;
+      }
+
+      .clear {
+        clear: left;
+      }
+
+      .top-wrapper {
+        width: 100%;
+        padding-top: 60px;
+        padding-bottom: 20px;
+        padding-left: 5%;
+        padding-right: 5%;
+        background-color: #4a0a33;
+        background-size: cover;
+        color: white;
+        text-align: center;
+      }
+
+      .top-wrapper h1 {
+        opacity: 0.8;
+        font-size: 45px;
+        letter-spacing: 3px;
+      }
+
+      .top-wrapper p {
+        opacity: 0.8;
+        line-height: 16px;
+      }
+
+      .shortrange-wrapper {
+        padding-top: 20px;
+        padding-bottom: 40px;
+        padding-left: 5%;
+        padding-right: 5%;
+        background-color: #f7f7f7;
+      }
+
+      .heading-shortrange-wpr {
+        padding-bottom: 40px;
+        color: #4a0a33;
+        text-align: left;
+        height: 100%;
+      }
+
+      .heading-shortrange-wpr p {
+        line-height: 16px;
+      }
+
+      h2,h3 {
+        color: #4a0a33;
+      }
+
+      button {
+        display: inline-block;
+        cursor: pointer;
+        padding: 5px 10px;
+        margin-bottom: 3px;
+        font-size: 12px;
+        text-align: center;
+        border: 1px solid #4a0a33;
+        color: #4a0a33;
+        border-radius: 4px;
+        float: left;
+        background-color: #f7f7f7;
+      }
+
+      .content {
+        float: left;
+        width: 50%;
+        padding: 0 20px;
+      }
+
+      .content-item-1hr {
+        color: #4a0a33;
+      }
+
+      .carousel {
+          position: relative;
+          margin-top: 26px;
+          margin-bottom: 26px;
+      }
+
+      .carousel-inner {
+          position: relative;
+          overflow: hidden;
+          width: 100%;
+      }
+
+      .carousel-open:checked + .carousel-item {
+          position: static;
+          opacity: 100;
+      }
+
+      .carousel-item {
+          position: absolute;
+          opacity: 0;
+          -webkit-transition: opacity 0.6s ease-out;
+          transition: opacity 0.6s ease-out;
+      }
+
+      .carousel-item img {
+          display: block;
+          max-width: 100%;
+          height: 435px;
+          width: 415px;
+          margin: 0 auto;
+          position: inherit;
+      }
+
+      .carousel-control {
+          background: rgba(0, 0, 0, 0.28);
+          border-radius: 50%;
+          color: #fff;
+          cursor: pointer;
+          display: none;
+          font-size: 40px;
+          height: 40px;
+          width: 40px;
+          line-height: 35px;
+          position: absolute;
+          top: 42%;
+          -webkit-transform: translate(0, -50%);
+          -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+          text-align: center;
+          z-index: 9;
+      }
+
+      .carousel-control.prev {
+          left: 1%;
+      }
+
+      .carousel-control.next {
+          right: 1%;
+      }
+
+      .carousel-control:hover {
+          background: rgba(0, 0, 0, 0.8);
+          color: #aaaaaa;
+      }
+
+
+      #carousel-1:checked ~ .control-1,
+      #carousel-2:checked ~ .control-2,
+      #carousel-3:checked ~ .control-3,
+      #carousel-4:checked ~ .control-4,
+      #carousel-5:checked ~ .control-5,
+      #carousel-6:checked ~ .control-6,
+      #carousel-7:checked ~ .control-7,
+      #carousel-8:checked ~ .control-8,
+      #carousel-9:checked ~ .control-9,
+      #carousel-10:checked ~ .control-10,
+      #carousel-11:checked ~ .control-11,
+      #carousel-12:checked ~ .control-12,
+      #carousel-13:checked ~ .control-13,
+      #carousel-14:checked ~ .control-14,
+      #carousel-15:checked ~ .control-15,
+      #carousel-16:checked ~ .control-16,
+      #carousel-17:checked ~ .control-17,
+      #carousel-18:checked ~ .control-18,
+      #carousel-19:checked ~ .control-19,
+      #carousel-20:checked ~ .control-20,
+      #carousel-21:checked ~ .control-21,
+      #carousel-22:checked ~ .control-22,
+      #carousel-23:checked ~ .control-23,
+      #carousel-24:checked ~ .control-24,
+      #carousel-25:checked ~ .control-25,
+      #carousel-26:checked ~ .control-26,
+      #carousel-27:checked ~ .control-27,
+      #carousel-28:checked ~ .control-28,
+      #carousel-29:checked ~ .control-29,
+      #carousel-30:checked ~ .control-30,
+      #carousel-31:checked ~ .control-31,
+      #carousel-32:checked ~ .control-32,
+      #carousel-33:checked ~ .control-33,
+      #carousel-34:checked ~ .control-34,
+      #carousel-35:checked ~ .control-35,
+      #carousel-36:checked ~ .control-36 {
+          display: block;
+      }
+
+      .carousel ul, .carousel ol {
+          margin-bottom: 50px;
+          padding: 1em 1em 1em 2.5em;
+          border: solid 0px #e8e8e8;
+          border-radius: 3px;
+          max-height: 10px;
+      }
+
+      .content-item-12hrs {
+        position: relative;
+        width: 100%;
+        text-align: left;
+        color: #4a0a33;
+      }
+
+      .content-item-12hrs p {
+        line-height: 16px;
+      }
+
+      .btn-12hrs a {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        text-align: center;
+        touch-action: manipulation;
+        cursor: pointer;
+        border: 1px solid #4a0a33;
+        border-radius: 4px;
+      }
+
+      .case-study-wrapper {
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: left;
+      }
+
+      .image-responsive  {
+        display: block;
+        max-width: 80%;
+        margin: 0 auto;
+        position: inherit;
+      }
+
+      footer p {
+        color: #b3aeb5;
+        font-size: 12px;
+        padding-left: 15px;
+      }
+
+      footer {
+        padding-top: 30px;
+        padding-bottom: 20px;
+      }
+
+      @media all and (max-width: 1000px) {
+        .top-wrapper h1 {
+          font-size: 22px;
+        }
+
+        .heading-shortrange-wpr h2 {
+          font-size: 20px;
+        }
+
+        .content {
+          width: 100%;
+        }
+
+        .carousel-item img {
+            height: 447px;
+            width: 424px;
+        }
+
+        .carousel-control.prev {
+            left: 10%;
+        }
+
+        .carousel-control.next {
+            right: 10%;
+        }
+
+        h2 {
+          font-size: 20px;
+        }
+
+        .image-responsive  {
+          max-width: 100%;
+        }
+      }
+
+
+      @media all and (max-width: 670px) {
+        .carousel-item img {
+            height: 320px;
+            width: 300px;
+        }
+
+        .carousel-control.prev {
+            left: 8%;
+        }
+
+        .carousel-control.next {
+            right: 8%;
+        }
+
+        .container-footer p {
+          text-align: center;
+        }
+      }
+
+/*ボタン*/
+.btn_reload {
+	margin-bottom: 20px;
+}
+
+.btn_reload a {
+	display: block;
+	width: 80%;
+	max-width: 260px;
+	margin: 0 auto;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	background: #01b264;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+	font-size: 0.875rem;
+	transition: .3s ease;
+}
+
+.btn_reload a:hover {
+	background: #016839;
+	transition: .3s ease;
+}
+
+.btn_reload a i {
+	margin-right: 0.5em;
+}
+    </style>
+
+  </head>
+  <body>
+    <header>
+      <div class="container-header">
+        <div class="header-left">
+          <p>東京ミッドタウン日比谷</p>
+        </div>
+          <!-- <div class="header-right">
+          <img class="wnilogo" src="#">
+        </div> -->
+      </div>
+    </header>
+
+    <div class="top-wrapper">
+        <h1>ステップ広場の風向と風速</h1>
+        <p>ビル風特性調査および対策運用フロー検証を目的としたプロトタイプサービスをご利用頂きまして、ありがとうございます。</p>
+        <p>閲覧にはID/Passwordが必要です。ID/Passwordはご案内メール本文に記載がございます。</p>
+    </div>
+
+    <div class="shortrange-wrapper">
+      <div class="container-shortrange-wpr">
+        <div class="heading-shortrange-wpr">
+          <h2>36時間先までの予測</h2>
+          <p>・地上1.5mの平均風速、風向を予測しています。</p>
+          <p>・情報更新は0時、3時、・・・21時の3時間毎です。</p>
+<!--          <button onclick="openChild()">画像が表示されない場合はこちら >></button>-->
+
+<button onclick="window.location.reload(true);">画像が表示されない場合はこちらをクリック</button>
+        </div>
+        <div class="contents">
+          <div class="content">
+            <div class="content-item-1hr">
+              <h3>1時間ごと</h3>
+              <div class="carousel">
+                <div class="carousel-inner">
+                    <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-1.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-2.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-3.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-4" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-4.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-5" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-5.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-6" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-6.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-7" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-7.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-8" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-8.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-9" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-9.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-10" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-10.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-11" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-11.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-12" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-12.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-13" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-13.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-14" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-14.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-15" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-15.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-16" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-16.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-17" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-17.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-18" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-18.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-19" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-19.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-20" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-20.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-21" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-21.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-22" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-22.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-23" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-23.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-24" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-24.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-25" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-25.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-26" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-26.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-27" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-27.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-28" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-28.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-29" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-29.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-30" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-30.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-31" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-31.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-32" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-32.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-33" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-33.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-34" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-34.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-35" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-35.png">
+                    </div>
+                    <input class="carousel-open" type="radio" id="carousel-36" name="carousel" aria-hidden="true" hidden="">
+                    <div class="carousel-item">
+                        <img src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest-sngle-36.png">
+                    </div>
+
+                    <label for="carousel-36" class="carousel-control prev control-1">‹</label>
+                    <label for="carousel-2" class="carousel-control next control-1">›</label>
+                    <label for="carousel-1" class="carousel-control prev control-2">‹</label>
+                    <label for="carousel-3" class="carousel-control next control-2">›</label>
+                    <label for="carousel-2" class="carousel-control prev control-3">‹</label>
+                    <label for="carousel-4" class="carousel-control next control-3">›</label>
+                    <label for="carousel-3" class="carousel-control prev control-4">‹</label>
+                    <label for="carousel-5" class="carousel-control next control-4">›</label>
+                    <label for="carousel-4" class="carousel-control prev control-5">‹</label>
+                    <label for="carousel-6" class="carousel-control next control-5">›</label>
+                    <label for="carousel-5" class="carousel-control prev control-6">‹</label>
+                    <label for="carousel-7" class="carousel-control next control-6">›</label>
+                    <label for="carousel-6" class="carousel-control prev control-7">‹</label>
+                    <label for="carousel-8" class="carousel-control next control-7">›</label>
+                    <label for="carousel-7" class="carousel-control prev control-8">‹</label>
+                    <label for="carousel-9" class="carousel-control next control-8">›</label>
+                    <label for="carousel-8" class="carousel-control prev control-9">‹</label>
+                    <label for="carousel-10" class="carousel-control next control-9">›</label>
+                    <label for="carousel-9" class="carousel-control prev control-10">‹</label>
+                    <label for="carousel-11" class="carousel-control next control-10">›</label>
+                    <label for="carousel-10" class="carousel-control prev control-11">‹</label>
+                    <label for="carousel-12" class="carousel-control next control-11">›</label>
+                    <label for="carousel-11" class="carousel-control prev control-12">‹</label>
+                    <label for="carousel-13" class="carousel-control next control-12">›</label>
+                    <label for="carousel-12" class="carousel-control prev control-13">‹</label>
+                    <label for="carousel-14" class="carousel-control next control-13">›</label>
+                    <label for="carousel-13" class="carousel-control prev control-14">‹</label>
+                    <label for="carousel-15" class="carousel-control next control-14">›</label>
+                    <label for="carousel-14" class="carousel-control prev control-15">‹</label>
+                    <label for="carousel-16" class="carousel-control next control-15">›</label>
+                    <label for="carousel-15" class="carousel-control prev control-16">‹</label>
+                    <label for="carousel-17" class="carousel-control next control-16">›</label>
+                    <label for="carousel-16" class="carousel-control prev control-17">‹</label>
+                    <label for="carousel-18" class="carousel-control next control-17">›</label>
+                    <label for="carousel-17" class="carousel-control prev control-18">‹</label>
+                    <label for="carousel-19" class="carousel-control next control-18">›</label>
+                    <label for="carousel-18" class="carousel-control prev control-19">‹</label>
+                    <label for="carousel-20" class="carousel-control next control-19">›</label>
+                    <label for="carousel-19" class="carousel-control prev control-20">‹</label>
+                    <label for="carousel-21" class="carousel-control next control-20">›</label>
+                    <label for="carousel-20" class="carousel-control prev control-21">‹</label>
+                    <label for="carousel-22" class="carousel-control next control-21">›</label>
+                    <label for="carousel-21" class="carousel-control prev control-22">‹</label>
+                    <label for="carousel-23" class="carousel-control next control-22">›</label>
+                    <label for="carousel-22" class="carousel-control prev control-23">‹</label>
+                    <label for="carousel-24" class="carousel-control next control-23">›</label>
+                    <label for="carousel-23" class="carousel-control prev control-24">‹</label>
+                    <label for="carousel-25" class="carousel-control next control-24">›</label>
+                    <label for="carousel-24" class="carousel-control prev control-25">‹</label>
+                    <label for="carousel-26" class="carousel-control next control-25">›</label>
+                    <label for="carousel-25" class="carousel-control prev control-26">‹</label>
+                    <label for="carousel-27" class="carousel-control next control-26">›</label>
+                    <label for="carousel-26" class="carousel-control prev control-27">‹</label>
+                    <label for="carousel-28" class="carousel-control next control-27">›</label>
+                    <label for="carousel-27" class="carousel-control prev control-28">‹</label>
+                    <label for="carousel-29" class="carousel-control next control-28">›</label>
+                    <label for="carousel-28" class="carousel-control prev control-29">‹</label>
+                    <label for="carousel-30" class="carousel-control next control-29">›</label>
+                    <label for="carousel-29" class="carousel-control prev control-30">‹</label>
+                    <label for="carousel-31" class="carousel-control next control-30">›</label>
+                    <label for="carousel-30" class="carousel-control prev control-31">‹</label>
+                    <label for="carousel-32" class="carousel-control next control-31">›</label>
+                    <label for="carousel-31" class="carousel-control prev control-32">‹</label>
+                    <label for="carousel-33" class="carousel-control next control-32">›</label>
+                    <label for="carousel-32" class="carousel-control prev control-33">‹</label>
+                    <label for="carousel-34" class="carousel-control next control-33">›</label>
+                    <label for="carousel-33" class="carousel-control prev control-34">‹</label>
+                    <label for="carousel-35" class="carousel-control next control-34">›</label>
+                    <label for="carousel-34" class="carousel-control prev control-35">‹</label>
+                    <label for="carousel-36" class="carousel-control next control-35">›</label>
+                    <label for="carousel-35" class="carousel-control prev control-36">‹</label>
+                    <label for="carousel-1" class="carousel-control next control-36">›</label>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="content-item-12hrs">
+              <h3>1～12時間先</h3>
+              <p>半日先に向けたアクションを考える際にご活用ください</p>
+              <div class="btn-12hrs">
+                <a href="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest0.png" class="btn 12hrs">閲覧 >></a>
+              </div>
+            </div>
+            <div class="content-item-12hrs">
+              <h3>13～24時間先</h3>
+              <p>明日に向けたアクションを考える際にご活用ください</p>
+              <div class="btn-12hrs">
+                <a href="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest1.png" class="btn 12hrs">閲覧 >></a>
+              </div>
+            </div>
+            <div class="content-item-12hrs">
+              <h3>25～36時間先</h3>
+              <p>時間の掛かる準備に向けたアクションを考える際にご活用ください</p>
+              <div class="btn-12hrs">
+                <a href="https://d264sb0s6g3uzg.cloudfront.net/mfbm/png/latest2.png" class="btn 12hrs">閲覧 >></a>
+              </div>
+            </div>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <div class="case-study-wrapper">
+      <h2>強風事例紹介</h2>
+      <div>
+        <img class="image-responsive" src="https://biz.weathernews.com/l/577471/2020-10-31/qqx42/577471/1604122308Pg2FBN8a/hibiyastep_20201030_00004.png">
+        <br>
+        <img class="image-responsive" src="https://biz.weathernews.com/l/577471/2020-10-31/qqx46/577471/1604122309kntqncuW/hibiyastep_20201030_00005.png">
+      </div>
+    </div>
+
+    <footer>
+      <div class="container-footer">
+        <p>© Copyright Weathernews Inc.</p>
+      </div>
+    </footer>
+<IFRAME width=1 height=1 src="https://d264sb0s6g3uzg.cloudfront.net/mfbm/web/authentication-wni.html" scrolling=no frameborder=0></IFRAME>
+
+  </body>
+</html>
